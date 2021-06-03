@@ -1,0 +1,21 @@
+.text-shadow {
+  text-shadow: 2px 2px orange;
+  color: red; }
+
+.box-shadow, .second {
+  box-shadow: 5px 30px paleturquoise;
+  background-color: yellow; }
+
+.first {
+  border: 1px solid red; }
+
+.second {
+  border: 1px solid blue; }
+
+.third {
+  border: 1px solid green; }
+
+p {
+  width: 940px; }
+
+/*# sourceMappingURL=main.css.map */

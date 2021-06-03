@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>BIT STUDENT</title>
+  </head>
+  <body>
+    <div class="navbar-wrap container-fluid">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">BIT STUDENT</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            MENU
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >PORTFOLIO</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Glavni container -->
+    <div>
+      <div class="container-wrap">
+        <div class="container text-center p-5">
+          <img src="./img/portfolio/profile.png" alt="" class="mb-5" />
+          <h1>BOOTSTRAP AND SASS</h1>
+          <p>Web Developer - Graphic Artist - User Experience Designer</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio -->
+
+    <div class="container p-5">
+      <div class="row text-center">
+        <h2 class="fs-1 fw-bolder text p-5">PORTFOLIO</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <img src="./img/portfolio/cabin.png" class="p-3 img-fluid" alt="" />
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <img src="./img/portfolio/cake.png" class="p-3 img-fluid" alt="" />
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <img src="./img/portfolio/circus.png" class="p-3 img-fluid" alt="" />
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <img src="./img/portfolio/game.png" class="p-3 img-fluid" alt="" />
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <img src="./img/portfolio/safe.png" class="p-3 img-fluid" alt="" />
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <img
+            src="./img/portfolio/submarine.png"
+            class="p-3 img-fluid"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- About section -->
+    <div class="aboutWrap container-fluid p-5">
+      <div class="container">
+        <div class="row text-center">
+          <h2 class="fs-1 fw-bolder text p-5 text-white">ABOUT</h2>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-5">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consectetur, sint ut iusto optio molestiae ratione in quibusdam
+              nihil tempore minima cum, velit modi. Amet nihil dolorem excepturi
+              laboriosam error autem.
+            </p>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-5">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consectetur, sint ut iusto optio molestiae ratione in quibusdam
+              nihil tempore minima cum, velit modi. Amet nihil dolorem excepturi
+              laboriosam error autem.
+            </p>
+          </div>
+          <div class="d-flex justify-content-center pt-5 pb-10">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg btn-outline-light"
+              data-bs-toggle="button"
+              autocomplete="off"
+            >
+              Find Out More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Me section -->
+    <div class="contactWrap container-fluid">
+      <div class="container p-5">
+        <div class="row text-center">
+          <h2 class="fs-1 fw-bolder text">CONTACT ME</h2>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 ">
+            <label for="formControlInput" class="form-label">Name</label>
+            <input type="name" class="form-control" id="formControlInput" />
+          </div>
+          <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10">
+            <label for="formControlInput" class="form-label"
+              >Email Address</label
+            >
+            <input type="email" class="form-control" id="formControlInput" />
+          </div>
+          <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10">
+            <label for="formControlInput" class="form-label"
+              >Phone number</label
+            >
+            <input type="number" class="form-control" id="formControlInput" />
+          </div>
+          <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10">
+            <label for="floatingTextarea">Message</label>
+            <textarea class="form-control" id="floatingTextarea"></textarea>
+          </div>
+          <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 ">
+            <button type="button" class="btn btn-primary" 
+            data-bs-toggle="button" autocomplete="off">Send
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer section -->
+    <div class="footerWrap container-fluid">
+        <div class="container p-5 pb-0">
+            <!-- First row with 3 columns - Location, ATW and MD -->
+            <div class="row">
+                <!-- Prva kolona Location -->
+                <div class="col-4">
+                    <div class="row text-center text-white">
+                        <div class="col-12">
+                            <h3>LOCATION</h3>
+                        </div>
+                        <div class="col-12 maliParagrafi">
+                            <p>Centar za obrazovanje</p>
+                            <p>BIT TECHNOLOGY</p>
+                            <p>Nemanjina 4/I, Beograd</p>
+                        </div>                        
+                    </div>
+                </div>
+                <!-- Druga kolona Around the Web -->
+                <div class="col-4">
+                    <div class="row ">
+                        <div class="col-12 text-center text-white">
+                            <h3>AROUND THE WEB</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3 col-md-4 col-lg-3 img-fluid">
+                                <img src="./img/portfolio/insta.png" alt="" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="col-sm-3 col-md-4 col-lg-3 img-fluid">
+                                <img src="./img/portfolio/insta.png" alt="" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="col-sm-3 col-md-4 col-lg-3 img-fluid">
+                                <img src="./img/portfolio/insta.png" alt="" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="col-sm-3 col-md-4 col-lg-3 img-fluid">
+                                <img src="./img/portfolio/insta.png" alt="" class="img-fluid rounded-circle">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-12 text-white">
+                            <h3>MORE DETAILS</h3>
+                        </div>
+                        <div class="col-12">
+                            <p>We believe that the future of Serbia firmly depends on our ability to scale the number of individuals involved in the IT sector. That is why we founded BIT.</p>                     
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h5 class="text-white">Copyright© Bit Student 2017</h5>
+                    <p>Big thanks to Start Bootstrap!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

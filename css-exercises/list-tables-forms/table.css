@@ -1,0 +1,28 @@
+.collapse {
+  border-collapse: collapse;
+}
+.center {
+  margin: 0 auto;
+}
+
+tr:nth-child(2n) {
+  background-color: grey;
+}
+
+th {
+  background-color: red;
+  color: white;
+}
+
+.image {
+  height: 100px;
+}
+
+td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+tr:hover {
+  background-color: yellow;
+}

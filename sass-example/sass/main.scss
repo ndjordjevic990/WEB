@@ -1,0 +1,8 @@
+$crvena: rgb(255, 0, 0);
+
+.first {
+  border: 1px solid black;
+  p {
+    color: $crvena;
+  }
+}

@@ -1,0 +1,269 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+//********************** MOBILE**********************//
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 90%;
+  padding: 5px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+header img {
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 4px;
+  width: 97%;
+  margin-bottom: 10px;
+}
+
+article {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+article img {
+  width: 95%;
+  border: 1px solid lightgray;
+}
+
+nav {
+  margin: 10px 0;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+nav li {
+  list-style-type: none;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+nav li:hover {
+  background-color: lightskyblue;
+  color: white;
+}
+
+nav a:hover {
+  background-color: lightskyblue;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  width: 100%;
+}
+
+/************************ TABLET **************************/
+@media (min-width: 768px) {
+  h2 {
+    text-align: left;
+  }
+  nav {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  article {
+    display: flex;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  article p {
+    text-align: center;
+    padding-left: 10px;
+  }
+
+  nav li:hover {
+    background-color: lightskyblue;
+    color: white;
+  }
+
+  nav a:hover {
+    background-color: lightskyblue;
+    color: white;
+  }
+}
+
+/************************ DESKTOP **************************/
+@media (min-width: 922px) {
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: -webkit-fill-available;
+    margin-bottom: 20px;
+  }
+  main {
+    display: flex;
+    width: auto;
+  }
+  article {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+    padding: inherit;
+  }
+
+  article img {
+    margin-bottom: 15px;
+  }
+} ;

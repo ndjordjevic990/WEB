@@ -1,0 +1,400 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.build {
+  color: #ff9801;
+  border: 2px solid #777777;
+  border-right: none;
+  padding: 3px;
+  margin-right: 3px;
+}
+
+.estate {
+  padding: 5px;
+  color: #77777;
+}
+
+.buildestate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.navbar {
+  margin: 10px 0;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #7fc2f7;
+}
+
+.navbar li {
+  list-style-type: none;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+header {
+  background-image: url("../css-project/assets/images/banner3.jpg");
+  background-size: cover;
+  height: 250px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+header h2 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+button {
+  background-color: #146eb4;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 15px;
+  border-style: hidden;
+}
+
+hr {
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double #333;
+  color: #333;
+  text-align: center;
+}
+hr:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main {
+  margin: 0 5%;
+}
+
+.title {
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.mini {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 1.8;
+}
+
+.mini-headline {
+  color: #7fc2f7;
+  padding: 10px 0;
+}
+
+.paragraf {
+  margin: 15px 0;
+}
+
+.parList#arrow {
+  list-style-image: url(./assets/images/arrow_bullet.png);
+  margin: 0 5%;
+}
+
+.parList li {
+  line-height: 2.5;
+}
+
+.parList {
+  padding-bottom: 30px;
+}
+
+.centralimage {
+  max-width: -webkit-fill-available;
+}
+
+article {
+  width: 100%;
+  background-color: #7fc2f7;
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+}
+
+h4 {
+  color: black;
+}
+
+article p {
+  margin: 2px 2% 10px 2%;
+  line-height: 2.5;
+  font-size: 20px;
+}
+article img {
+  border-radius: 50%;
+  border: 2px solid white;
+  width: 20%;
+  margin: 20px 10px 5px 10px;
+}
+
+.rating {
+  float: right;
+  font-size: 20px;
+}
+
+.getintouchwithus {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact {
+  width: 50%;
+  height: 250px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.telephone {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 20px;
+}
+
+.contactimg {
+  width: 25px;
+}
+
+.contact a {
+  color: white;
+}
+
+.house {
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0;
+  border-radius: 0;
+}
+
+.miniheadings {
+  color: white;
+  font-size: 20px;
+}
+
+.backcolor1 {
+  background-color: #2cdd98;
+}
+.backcolor2 {
+  background-color: #ff4f81;
+}
+.backcolor3 {
+  background-color: #3369e6;
+}
+
+.contact p {
+  text-align: center;
+}
+
+iframe {
+  width: 100%;
+  height: 250px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.firstrow {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  height: 40px;
+  margin: 10px 5%;
+}
+
+.message {
+  height: 120px;
+  margin: 10px 5%;
+}
+
+.submit {
+  width: 100px;
+  margin-left: 5%;
+  margin-bottom: 40px;
+  height: 30px;
+  background-color: #ff9801;
+  color: white;
+  border: none;
+}
+
+footer {
+  background-color: #212121;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+footer li {
+  display: inline-block;
+}
+
+footer li a {
+  text-decoration: none;
+  color: white;
+  list-style-type: none;
+  padding: 5px;
+}
+
+.footerlist {
+  margin-bottom: 20px;
+}
+
+hr {
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+hr:after {
+  background: #fff;
+  content: "§";
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
+
+/************************ TABLET **************************/
+@media (min-width: 768px) {
+  .build {
+    color: #ff9801;
+    border: 2px solid white;
+    border-right: none;
+    padding: 3px;
+    margin-right: 3px;
+  }
+
+  .estate {
+    padding: 5px;
+    color: white;
+  }
+  .buildestate {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 15px;
+    position: absolute;
+    margin-left: 5%;
+  }
+  .navbar {
+    margin: 10px 0;
+    width: 100%;
+    margin-bottom: 20px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    background-color: transparent;
+  }
+
+  .whoweare {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .centralimage {
+    width: 100%;
+  }
+
+  .mini1 {
+    width: 45%;
+  }
+
+  .whatpeoplesay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  article {
+    width: 47%;
+    background-color: #7fc2f7;
+    margin: 15px 10px 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+  }
+
+  .firstrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 5%;
+  }
+
+  .input1 {
+    width: 30%;
+    margin: 0;
+  }
+}
+
+/************************ DESKTOP **************************/
+@media (min-width: 1200px) {
+  .mini {
+    width: 30%;
+  }
+  .whoweare {
+    display: flex;
+  }
+
+  .whatpeoplesay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  article {
+    width: 31%;
+  }
+
+  .contact {
+    width: 25%;
+    text-color
+  }
+}

@@ -1,0 +1,16 @@
+$color: #78a04d;
+$font-size: 25px;
+
+p {
+  color: $color;
+  font-size: $font-size;
+}
+
+@mixin shadowing() {
+  text-shadow: 2px 2px #ff0000;
+  box-shadow: 5px 10px #888888;
+}
+
+div {
+  @include shadowing();
+}

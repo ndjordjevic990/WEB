@@ -1,0 +1,14 @@
+p {
+  background-color: yellow;
+}
+
+.dashed {
+  border: red;
+  border-style: dashed;
+  padding: 50px;
+}
+
+.greend {
+  border: 5px solid green;
+  padding-top: 50px;
+}

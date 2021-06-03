@@ -1,0 +1,33 @@
+/* One underneath other - part1
+/* .first {
+    height: 200px;
+  }
+  
+  .second {
+    width: 200px;
+  }
+  
+  .third {
+    width: 200px;
+    height: 200px;
+  } */
+
+/******************************/
+
+.first {
+  height: 200px;
+  float: right;
+  clear: left;
+}
+
+.second {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.third {
+  width: 200px;
+  height: 200px;
+  float: left;
+}

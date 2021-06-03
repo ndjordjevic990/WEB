@@ -1,0 +1,66 @@
+.center {
+  text-align: center;
+  color: brown;
+}
+.container {
+  background-color: rgb(224, 214, 214);
+}
+
+.dim1 {
+  background-color: #c1392b;
+  width: 200px;
+  height: 200px;
+}
+
+.dim2 {
+  background-color: #ffbe00;
+  width: 200px;
+  height: 200px;
+}
+
+.dim3 {
+  background-color: #2d3e50;
+  width: 200px;
+  height: 200px;
+}
+
+.div4 {
+  position: absolute;
+}
+.div5 {
+  position: relative;
+  top: 70px;
+  left: 60px;
+}
+.div6 {
+  position: relative;
+  top: -60px;
+  left: 120px;
+}
+
+.parent {
+  position: absolute;
+  right: 10px;
+  width: 200px;
+}
+.div7 {
+  position: relative;
+  z-index: 3;
+}
+.div8 {
+  /* position: inherit;
+  top: 70px;
+  right: 60px;
+  z-index: 2; */
+
+  position: relative;
+  top: -120px;
+  right: 60px;
+  z-index: 2;
+}
+.div9 {
+  position: relative;
+  top: -240px;
+  right: 120px;
+  z-index: 1;
+}

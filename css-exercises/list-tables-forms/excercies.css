@@ -1,0 +1,23 @@
+.circles {
+  list-style-type: circle;
+}
+.squares {
+  list-style-type: square;
+}
+.upper {
+  list-style-type: upper-alpha;
+}
+.roman {
+  list-style-type: upper-roman;
+}
+
+.image-marker {
+  width: 200px;
+  list-style-image: url(https://www.w3schools.com/cssref/sqpurple.gif);
+}
+
+.second {
+  width: 200px;
+  list-style-image: url(https://www.w3schools.com/cssref/sqpurple.gif);
+  list-style-position: inside;
+}

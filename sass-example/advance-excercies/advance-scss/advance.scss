@@ -1,0 +1,57 @@
+$active-link: yellow;
+$visited-link: orange;
+$not-clicked: green;
+$font-size: 16px;
+$integer: 1;
+@mixin integer($integer) {
+  @if $integer==1 {
+    background-color: $active-link;
+  } @else if $integer==2 {
+    background-color: $visited-link;
+  } @else if $integer==3 {
+    background-color: $not-clicked;
+  } @else {
+    background-color: blue;
+  }
+}
+
+a {
+  text-decoration: none;
+  background-color: $not-clicked;
+
+  &:visited {
+    background-color: $visited-link;
+  }
+  &:active {
+    background-color: $active-link;
+  }
+}
+
+.important {
+  font-weight: bold;
+}
+
+.par-1 {
+  font-size: $font-size;
+}
+
+@for $i from 2 through 4 {
+  .par-#{$i} {
+    $font-size: $font-size + 2px;
+    font-size: $font-size;
+  }
+}
+
+p {
+  @include integer(3);
+}
+
+@function content-box($n) {
+  @return $n;
+}
+.content {
+  box-sizing: content-box;
+}
+.border {
+  box-sizing: border-box;
+}

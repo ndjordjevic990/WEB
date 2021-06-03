@@ -1,0 +1,8 @@
+body {
+  background-image: url(../300x200.png);
+  background-size: cover;
+  
+  background-repeat: no-repeat;
+  /* background-position: right center;
+  background-attachment: fixed;
+} */

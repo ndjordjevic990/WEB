@@ -1,0 +1,23 @@
+.img1 {
+  position: relative;
+  top: 50px;
+  bottom: 100px;
+  margin-bottom: 50px;
+}
+
+.img2 {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.img3 {
+  position: absolute;
+  bottom: 10px;
+}
+
+.link {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}

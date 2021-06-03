@@ -1,0 +1,15 @@
+.bg {
+  background-color: orange;
+}
+
+.li-bg {
+  background-color: red;
+}
+
+.li-third {
+  background-color: yellow;
+}
+
+.active {
+  background-color: darkmagenta;
+}

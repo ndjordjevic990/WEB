@@ -1,0 +1,27 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.text-shadow {
+  @include text-shadow();
+  color: $text-color;
+}
+
+.box-shadow {
+  @include box-shadow();
+  background-color: $background-color;
+}
+
+.first {
+  border: $red-border;
+}
+.second {
+  border: $blue-border;
+  @extend .box-shadow;
+}
+.third {
+  border: $green-border;
+}
+
+p {
+  width: $paragrapg-width;
+}

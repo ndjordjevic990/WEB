@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+h2 {
+  text-align: center;
+  display: block;
+  margin: 20px 0px;
+}
+
+header,
+nav,
+main {
+  max-width: 100%;
+  margin: 10px;
+  display: block;
+}
+
+nav {
+  max-width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+
+ul li {
+  display: block;
+  margin: 0 auto;
+  border: lightgray 1px solid;
+  border-radius: 3px;
+  width: 90%;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  height: 40px;
+  vertical-align: middle;
+  line-height: 40px;
+}
+
+article img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+article,
+header img {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  border: lightgray 2px solid;
+  border-radius: 5px;
+  padding: 2%;
+  margin-bottom: 20px;
+}
+
+li:hover {
+  background-color: lightskyblue;
+  color: white;
+}
+
+/* TABLET */
+
+@media (min-width: 768px) {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+
+  h2 {
+    text-align: left;
+    position: relative;
+    display: block;
+    margin: 20px 0px;
+    float: left;
+    padding-left: 5%;
+  }
+
+  header,
+  nav,
+  main {
+    max-width: 100%;
+    margin: 10px;
+    display: block;
+  }
+
+  nav {
+    list-style-type: none;
+    position: absolute;
+    top: 2.5%;
+    right: 5%;
+  }
+
+  ul li {
+    display: inline;
+    padding: 10px;
+  }
+
+  article img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  article,
+  header img {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    border: lightgray 2px solid;
+    border-radius: 5px;
+    padding: 2%;
+    margin-bottom: 20px;
+  }
+
+  li:hover {
+    background-color: lightskyblue;
+    color: white;
+  }
+
+  article img {
+    display: block;
+    float: left;
+    width: 30%;
+    margin-right: 10px;
+  }
+
+  article p {
+    padding: 20px 10px 10px 20px;
+    display: inline;
+    width: 50%;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 992px) {
+  body {
+    margin: 0 auto;
+  }
+
+  article {
+    display: inline-block;
+    width: 33%;
+    border: none;
+  }
+
+  article img {
+    width: 100%;
+  }
+
+  article p {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: 10px;
+    text-align: center;
+  }
+}
