@@ -1,0 +1,31 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.active {
+  width: 100%;
+  height: 100%;
+}
+
+.button-wrapper {
+  width: 40%;
+  margin: auto;
+}
+
+button {
+  border: none;
+  color: white;
+  background-color: #c1392b;
+  width: 200px;
+  height: 50px;
+  margin: auto auto;
+}
+
+.active {
+  background-color: #2d3e4f;
+}
+
+#turnOff {
+  background-color: #ffbf28;
+}
