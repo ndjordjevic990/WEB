@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-image: url(./images/bg.jpg);
+  background-repeat: repeat-x;
+  background-position-y: bottom;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+  position: fixed;
+  background-color: #0212fe;
+}
+
+img {
+  position: absolute;
+  height: 10vw;
+  bottom: 85px;
+  left: 40vw;
+}
+
+#running {
+  height: 9.5vw;
+  display: none;
+  left: 46vw;
+}
