@@ -1,4 +1,5 @@
-var button = document.querySelector("button");
+var toggleButton = document.querySelector("button");
+var turnOffButton = document.querySelector("#turnOff");
 var body = document.querySelector("body");
 var isOn = true;
 
@@ -9,10 +10,12 @@ function changeBackColor() {
 
 function turnOff() {
   if (isOn) {
-    button.onclick = null;
+    turnOffButton.innerHTML = "Turn On";
+    toggleButton.onclick = null;
     isOn = false;
   } else {
-    button.onclick = changeBackColor;
+    turnOffButton.innerHTML = "Turn Off";
+    toggleButton.onclick = changeBackColor;
     isOn = true;
   }
 }
