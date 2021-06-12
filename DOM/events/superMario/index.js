@@ -3,7 +3,7 @@ var marioRunning = document.querySelector("#running");
 var marioRunningLeft = document.querySelector("#running-left");
 var grass = document.querySelector(".container");
 var timer;
-var run = false;
+var running = false;
 
 document.addEventListener("keydown", startRunning);
 document.addEventListener("keydown", startRunningLeft);
@@ -25,22 +25,18 @@ function holdYourGround() {
 }
 
 function startRunning(e) {
-  if (e.keyCode == 39 && !run) {
+  if (e.keyCode == 39 && !running) {
     runningMario();
     timer = setInterval(movingGrass, 60);
-    run = true;
-  } else {
-    return;
+    running = true;
   }
 }
 
 function startRunningLeft(e) {
-  if (e.keyCode == 37 && !run) {
+  if (e.keyCode == 37 && !running) {
     runningMarioLeft();
     timer = setInterval(movingGrassLeft, 60);
-    run = true;
-  } else {
-    return;
+    running = true;
   }
 }
 
@@ -48,7 +44,7 @@ function stopRunning(e) {
   if (e.keyCode == 39 || e.keyCode == 37) {
     holdYourGround();
     clearInterval(timer);
-    run = false;
+    running = false;
   }
 }
 
