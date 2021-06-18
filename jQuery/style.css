@@ -1,0 +1,17 @@
+.border {
+  border-bottom: 1px solid;
+}
+.to-upper-case {
+  text-transform: uppercase;
+}
+.active {
+  color: blue;
+}
+
+.new-active {
+  color: red;
+}
+
+.bg-color {
+  background-color: lightblue;
+}
