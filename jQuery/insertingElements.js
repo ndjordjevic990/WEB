@@ -29,13 +29,16 @@ $(function () {
     $gallery.append($image);
   });
 
-  //****************************BONUS************************************** */
+  //****************************BONUS************************************************** */
   // Set a green border around each image whose width is less than 200px up until the first one that doesnt meet that requirement (i.e. when you get to the first img that is more than 200px wide, stop checking and setting green border).
   //*********************************************************************************** */
   var $imagesWithBorders = $("img");
   $imagesWithBorders.each(function () {
     if ($(this).width() < 200) {
       $(this).addClass("border");
+      // $(this).css({
+      //   border: "5px solid green",
+      // });
     } else {
       return false;
     }
