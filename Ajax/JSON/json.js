@@ -1,15 +1,15 @@
 var request = new XMLHttpRequest();
-
-request.open("GET", "https://dog.ceo/api/breeds/image/random", true);
+var div = document.querySelector("div");
 
 var button = document.querySelector("button");
-
-button.onclick = function () {
+request.onload = function () {
+  div.innerHTML = "";
   var parsedData = JSON.parse(request.responseText);
-  var div = document.querySelector("div");
   var img = document.createElement("img");
   img.setAttribute("src", parsedData.message);
   div.appendChild(img);
 };
-
-request.send();
+button.onclick = function () {
+  request.open("GET", "https://dog.ceo/api/breeds/image/random", true);
+  request.send();
+};
