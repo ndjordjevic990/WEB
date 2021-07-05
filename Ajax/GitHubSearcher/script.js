@@ -52,8 +52,14 @@ window.addEventListener("keydown", function (event) {
               divRepository.className = "repository";
               var header = document.createElement("h4");
               var paragraph = document.createElement("p");
+
+              var a = document.createElement("a");
+              a.textContent = dataRepo[i].name;
+              a.setAttribute("href", dataRepo[i].svn_url);
+
               paragraph.textContent = dataRepo[i].language;
-              header.textContent = dataRepo[i].name;
+              header.appendChild(a);
+
               divRepository.appendChild(header);
               divRepository.appendChild(paragraph);
               section.appendChild(divRepository);
