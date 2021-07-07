@@ -1,6 +1,4 @@
 let listOfShows = document.querySelector(".row");
-let searchField = document.querySelector("form-inline");
-let input = document.querySelector("form-control");
 
 let request = new XMLHttpRequest();
 request.open("GET", "http://api.tvmaze.com/shows");
@@ -34,3 +32,50 @@ request.onload = function () {
 };
 
 //********************** GETTING THE DROPDOWN LIST ON SEARCH *************************** */
+let body = document.querySelector("body");
+let searchField = document.querySelector(".form-inline");
+let input = document.querySelector(".form-control");
+let searchElementsList = document.createElement("ul");
+// searchElementsList.setAttribute("class", "search-results");
+
+let search = function () {
+  let searchRequest = new XMLHttpRequest();
+  searchRequest.open(
+    "GET",
+    `http://api.tvmaze.com/search/shows?q=${input.value}`
+  );
+  searchRequest.send();
+
+  searchRequest.onload = function () {
+    let data = JSON.parse(searchRequest.responseText);
+    console.log(data);
+    searchField.appendChild(searchElementsList);
+    searchElementsList.innerHTML = "";
+
+    for (let i = 0; i < data.length; i++) {
+      let li = document.createElement("li");
+      let liLink = document.createElement("a");
+      liLink.setAttribute("href", "");
+      li.textContent = data[i].show.name;
+      liLink.appendChild(li);
+      searchElementsList.appendChild(liLink);
+      // searchElementsList.setAttribute("class", "search-results");
+    }
+  };
+};
+input.addEventListener("keyup", search);
+
+// If user clicks outside of Search results list or Search field close dropdown list
+window.addEventListener("click", function (event) {
+  if (
+    event.target != searchElementsList &&
+    event.target != searchField &&
+    event.target.parentNode != searchField
+  ) {
+    searchElementsList.classList.add("hidden-results");
+    searchElementsList.classList.remove("search-results");
+    searchElementsList.classList.remove("search-results li");
+  } else searchElementsList.classList.remove("hidden-results");
+  searchElementsList.classList.add("search-results");
+  searchElementsList.classList.add("search-results li");
+});
