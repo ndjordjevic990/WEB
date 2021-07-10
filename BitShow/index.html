@@ -17,10 +17,10 @@
   <body>
     <!-- ********************************* NAVBAR ************************************** -->
 
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
       <nav class="navbar navbar-light bg-dark">
         <div class="container">
-          <a class="navbar-brand text-white">BitShow</a>
+          <a class="navbar-brand text-white" href="./index.html">BitShow</a>
           <form class="form-inline">
             <input
               class="form-control mr-sm-2"
@@ -35,15 +35,23 @@
     <!-- ******************************* MAIN SECTION *********************************** -->
 
     <div class="container">
-      <h1 class="text-center">Popular Shows</h1>
+      <h1 class="text-center py-2">Popular Shows</h1>
+      <!-- ****************************** LOADING SPINNER ********************************** -->
+
+      <div class="d-flex justify-content-center" id="spinner">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <!-- __________________________________________________________________ -->
       <div class="row"></div>
     </div>
     <!-- **********************************FOOTER**************************************** -->
 
-    <div class="container-fluid">
+    <div class="container-fluid position-sticky fixed-bottom p-0">
       <div class="footer navbar navbar-light bg-dark">
         <div class="col-12">
-          <h6 class="text-white text-center">
+          <h6 class="text-white text-center py-1">
             Copyright © Nikola Djordjevic | 2021
           </h6>
         </div>

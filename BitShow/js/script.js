@@ -8,6 +8,7 @@ request.onload = function () {
   let data = JSON.parse(request.responseText);
 
   data.sort((a, b) => b.rating.average - a.rating.average);
+  console.log(data);
 
   for (let i = 0; i < 50; i++) {
     let img = document.createElement("img");
@@ -16,8 +17,11 @@ request.onload = function () {
     let headerLink = document.createElement("a");
     let imgLink = document.createElement("a");
 
-    imgLink.setAttribute("href", "");
-    headerLink.setAttribute("href", "");
+    imgLink.setAttribute("href", `showInfo.html?id=${data[i].id}`);
+    imgLink.setAttribute("target", "_self");
+
+    headerLink.setAttribute("href", `showInfo.html?id=${data[i].id}`);
+    headerLink.setAttribute("target", "_self");
 
     show.className = "col-sm-12 col-md-4 col-lg-4 show ";
     img.setAttribute("src", data[i].image.medium);
@@ -36,7 +40,6 @@ let body = document.querySelector("body");
 let searchField = document.querySelector(".form-inline");
 let input = document.querySelector(".form-control");
 let searchElementsList = document.createElement("ul");
-// searchElementsList.setAttribute("class", "search-results");
 
 let search = function () {
   let searchRequest = new XMLHttpRequest();
@@ -52,15 +55,25 @@ let search = function () {
     searchField.appendChild(searchElementsList);
     searchElementsList.innerHTML = "";
 
-    for (let i = 0; i < data.length; i++) {
+    data.forEach((result) => {
       let li = document.createElement("li");
       let liLink = document.createElement("a");
-      liLink.setAttribute("href", "");
-      li.textContent = data[i].show.name;
+      liLink.setAttribute("href", `showInfo.html?id=${result.show.id}`);
+      liLink.setAttribute("target", "_self");
+      li.textContent = result.show.name;
       liLink.appendChild(li);
       searchElementsList.appendChild(liLink);
-      // searchElementsList.setAttribute("class", "search-results");
-    }
+    });
+
+    // for (let i = 0; i < data.length; i++) {
+    //   let li = document.createElement("li");
+    //   let liLink = document.createElement("a");
+    //   liLink.setAttribute("href", `showInfo.html?id=${data[i].show.id}`);
+    //   liLink.setAttribute("target", "_self");
+    //   li.textContent = data[i].show.name;
+    //   liLink.appendChild(li);
+    //   searchElementsList.appendChild(liLink);
+    // }
   };
 };
 input.addEventListener("keyup", search);
@@ -79,3 +92,9 @@ window.addEventListener("click", function (event) {
   searchElementsList.classList.add("search-results");
   searchElementsList.classList.add("search-results li");
 });
+
+// Adding a spinner that will get hidden once page is loaded
+window.onload = function () {
+  document.getElementById("spinner").classList.remove("d-flex");
+  document.getElementById("spinner").classList.add("hidden-results");
+};
