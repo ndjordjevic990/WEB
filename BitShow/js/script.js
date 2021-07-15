@@ -64,16 +64,6 @@ let search = function () {
       liLink.appendChild(li);
       searchElementsList.appendChild(liLink);
     });
-
-    // for (let i = 0; i < data.length; i++) {
-    //   let li = document.createElement("li");
-    //   let liLink = document.createElement("a");
-    //   liLink.setAttribute("href", `showInfo.html?id=${data[i].show.id}`);
-    //   liLink.setAttribute("target", "_self");
-    //   li.textContent = data[i].show.name;
-    //   liLink.appendChild(li);
-    //   searchElementsList.appendChild(liLink);
-    // }
   };
 };
 input.addEventListener("keyup", search);
