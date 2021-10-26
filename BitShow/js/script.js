@@ -1,39 +1,35 @@
 let listOfShows = document.querySelector(".row");
 
-let request = new XMLHttpRequest();
-request.open("GET", "http://api.tvmaze.com/shows");
-request.send();
+fetch("http://api.tvmaze.com/shows")
+  .then((response) => response.json())
+  .then((data) => {
+    data.sort((a, b) => b.rating.average - a.rating.average);
+    console.log(data);
 
-request.onload = function () {
-  let data = JSON.parse(request.responseText);
+    for (let i = 0; i < 50; i++) {
+      let img = document.createElement("img");
+      let h3 = document.createElement("h3");
+      let show = document.createElement("div");
+      let headerLink = document.createElement("a");
+      let imgLink = document.createElement("a");
 
-  data.sort((a, b) => b.rating.average - a.rating.average);
-  console.log(data);
+      imgLink.setAttribute("href", `showInfo.html?id=${data[i].id}`);
+      imgLink.setAttribute("target", "_self");
 
-  for (let i = 0; i < 50; i++) {
-    let img = document.createElement("img");
-    let h3 = document.createElement("h3");
-    let show = document.createElement("div");
-    let headerLink = document.createElement("a");
-    let imgLink = document.createElement("a");
+      headerLink.setAttribute("href", `showInfo.html?id=${data[i].id}`);
+      headerLink.setAttribute("target", "_self");
 
-    imgLink.setAttribute("href", `showInfo.html?id=${data[i].id}`);
-    imgLink.setAttribute("target", "_self");
-
-    headerLink.setAttribute("href", `showInfo.html?id=${data[i].id}`);
-    headerLink.setAttribute("target", "_self");
-
-    show.className = "col-sm-12 col-md-4 col-lg-4 show ";
-    img.setAttribute("src", data[i].image.medium);
-    h3.textContent = data[i].name;
-    headerLink.appendChild(h3);
-    imgLink.appendChild(img);
-    show.appendChild(imgLink);
-    show.appendChild(headerLink);
-    headerLink.appendChild(h3);
-    listOfShows.appendChild(show);
-  }
-};
+      show.className = "col-sm-12 col-md-4 col-lg-4 show ";
+      img.setAttribute("src", data[i].image.medium);
+      h3.textContent = data[i].name;
+      headerLink.appendChild(h3);
+      imgLink.appendChild(img);
+      show.appendChild(imgLink);
+      show.appendChild(headerLink);
+      headerLink.appendChild(h3);
+      listOfShows.appendChild(show);
+    }
+  });
 
 //********************** GETTING THE DROPDOWN LIST ON SEARCH *************************** */
 let body = document.querySelector("body");
@@ -42,29 +38,22 @@ let input = document.querySelector(".form-control");
 let searchElementsList = document.createElement("ul");
 
 let search = function () {
-  let searchRequest = new XMLHttpRequest();
-  searchRequest.open(
-    "GET",
-    `http://api.tvmaze.com/search/shows?q=${input.value}`
-  );
-  searchRequest.send();
+  fetch(`http://api.tvmaze.com/search/shows?q=${input.value}`)
+    .then((response) => response.json())
+    .then((data) => {
+      searchField.appendChild(searchElementsList);
+      searchElementsList.innerHTML = "";
 
-  searchRequest.onload = function () {
-    let data = JSON.parse(searchRequest.responseText);
-    console.log(data);
-    searchField.appendChild(searchElementsList);
-    searchElementsList.innerHTML = "";
-
-    data.forEach((result) => {
-      let li = document.createElement("li");
-      let liLink = document.createElement("a");
-      liLink.setAttribute("href", `showInfo.html?id=${result.show.id}`);
-      liLink.setAttribute("target", "_self");
-      li.textContent = result.show.name;
-      liLink.appendChild(li);
-      searchElementsList.appendChild(liLink);
+      data.forEach((result) => {
+        let li = document.createElement("li");
+        let liLink = document.createElement("a");
+        liLink.setAttribute("href", `showInfo.html?id=${result.show.id}`);
+        liLink.setAttribute("target", "_self");
+        li.textContent = result.show.name;
+        liLink.appendChild(li);
+        searchElementsList.appendChild(liLink);
+      });
     });
-  };
 };
 input.addEventListener("keyup", search);
 
